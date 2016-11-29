@@ -1,0 +1,165 @@
+@import 'utility'
+
+$base-text-size: 16px
+$base-font-family: sans-serif
+
+html
+  text-size-adjust: 100%
+
+body
+  @include font-smoothing(on)
+  margin: 0
+  font: $base-text-size / 1 $base-font-family
+
+//------------------------------//
+///////////  GENERAL  ////////////
+//------------------------------//
+
+html
+  text-size-adjust: 100%
+
+body
+  margin: 0
+  font: 16px / 1 sans-serif
+
+section
+  margin: 0 auto
+
+main
+  width: 80%
+  margin: 0 auto
+
+h3
+  color: DimGray
+  display: inline-block
+
+//-----------------------------------//
+///////////  HEADER & NAV  ////////////
+//-----------------------------------//
+
+nav.header
+  background-color: #f3f3f3
+  width: 100%
+  margin-bottom: 15px
+  padding: 10px
+
+li
+  list-style: none
+  padding: 10px
+
+nav ul
+  display: flex
+  justify-content: space-between
+  width: 95%
+  margin: 0 auto
+  padding: 0
+
+nav a:link,
+a:visited
+  text-decoration: none
+  font-family: "helvetica", "arial", sans-serif
+  font-size: 13px
+  font-weight: bolder
+  color: #000
+
+nav a:focus,
+a:hover,
+a:active
+  color: #4183c4
+
+ul .logo
+  background-image: url(img/logo.png)
+  background-repeat: no-repeat
+  background-position: left
+  color: transparent
+  background-size: 10em
+  padding: 0
+  width: 80%
+  margin-right: 20px
+
+
+//------------------------------//
+///////////  GALLERY  ////////////
+//------------------------------//
+
+.gallery
+  display: flex
+  flex-wrap: wrap
+
+.gallery img
+  border: 1px solid LightGray
+  border-radius: 2px
+  width: 270px
+  height: 270px
+  padding: 5px
+
+.gallery img.u-image
+  width: 28px
+  height: 28px
+  border: 0
+  padding: 0
+
+span.user
+  color: DimGray
+  font-weight: bolder
+
+.gallery figure
+  display: flex
+  flex-direction: column
+
+.gallery figcaption
+  margin: 10px 0 5px
+  border-bottom: 1px solid LightGray
+  height: 60px
+  width: 280px
+
+.gallery div.user-info
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.gallery p
+  margin: 0
+  padding: 2px
+
+
+//------------------------------//
+///////////  FOOTER  ////////////
+//------------------------------//
+
+footer
+  border-top: 1px solid LightGray
+  font-size: 12px
+  width: 100%
+  margin: 10px
+  color: #777
+
+footer ul
+  display: flex
+  justify-content: space-between
+  padding: 0
+
+footer.links
+  margin: 0 auto
+
+footer.links a:link,
+a:visited
+  text-decoration: none
+  font-family: "helvetica", "arial", sans-serif
+  font-size: 12px
+  font-weight: bolder
+  color: #777
+
+footer.links a:focus,
+a:hover,
+a:active
+  color: #4183c4
+
+footer .icon
+  // background-image: url(img/icon.png);
+  background-repeat: no-repeat
+  background-position: center
+  color: transparent
+  opacity: 0.3
+  background-size: 3em
+  padding: 0
