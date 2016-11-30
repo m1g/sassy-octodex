@@ -2,14 +2,8 @@
 
 $base-text-size: 16px
 $base-font-family: sans-serif
+$center-margin: 0 auto
 
-html
-  text-size-adjust: 100%
-
-body
-  @include font-smoothing(on)
-  margin: 0
-  font: $base-text-size / 1 $base-font-family
 
 //------------------------------//
 ///////////  GENERAL  ////////////
@@ -19,18 +13,19 @@ html
   text-size-adjust: 100%
 
 body
+  @include font-smoothing(on)
   margin: 0
-  font: 16px / 1 sans-serif
+  font: $base-text-size / 1 $base-font-family
 
 section
-  margin: 0 auto
+  margin: $center-margin
 
 main
   width: 80%
-  margin: 0 auto
+  margin: $center-margin
 
 h3
-  color: DimGray
+  color: hsl($hue: 0, $saturation: 0%, $lightness: 15%)
   display: inline-block
 
 //-----------------------------------//
@@ -43,32 +38,35 @@ nav.header
   margin-bottom: 15px
   padding: 10px
 
+nav
+
+  ul
+    display: flex
+    justify-content: space-between
+    width: 95%
+    margin: $center-margin
+    padding: 0
+
+  a:link,
+  a:visited
+    text-decoration: none
+    font-family: "helvetica", "arial", sans-serif
+    font-size: 13px
+    font-weight: bolder
+    color: #000
+    cursor: pointer
+
+  a:focus,
+  a:hover,
+  a:active
+    color: #4183c4
+
 li
   list-style: none
   padding: 10px
 
-nav ul
-  display: flex
-  justify-content: space-between
-  width: 95%
-  margin: 0 auto
-  padding: 0
-
-nav a:link,
-a:visited
-  text-decoration: none
-  font-family: "helvetica", "arial", sans-serif
-  font-size: 13px
-  font-weight: bolder
-  color: #000
-
-nav a:focus,
-a:hover,
-a:active
-  color: #4183c4
-
 ul .logo
-  background-image: url(img/logo.png)
+  background-image: url('https://octodex.github.com/ui/logo.png')
   background-repeat: no-repeat
   background-position: left
   color: transparent
@@ -108,7 +106,7 @@ span.user
   flex-direction: column
 
 .gallery figcaption
-  margin: 10px 0 5px
+  margin: 10px 0 0
   border-bottom: 1px solid LightGray
   height: 60px
   width: 280px
@@ -120,7 +118,7 @@ span.user
 
 .gallery p
   margin: 0
-  padding: 2px
+  // padding: 2px
 
 
 //------------------------------//
@@ -134,13 +132,21 @@ footer
   margin: 10px
   color: #777
 
-footer ul
-  display: flex
-  justify-content: space-between
-  padding: 0
+  ul
+    display: flex
+    justify-content: space-between
+    padding: 0
+
+  li.icon
+    background-image: url('https://cdn3.iconfinder.com/data/icons/free-social-icons/67/github_circle_color-512.png')
+    background-size: cover
+    background-repeat: no-repeat
+    width: 10px
+    height: 10px
+    opacity: 0.3
 
 footer.links
-  margin: 0 auto
+  margin: $center-margin
 
 footer.links a:link,
 a:visited
@@ -149,17 +155,11 @@ a:visited
   font-size: 12px
   font-weight: bolder
   color: #777
+  cursor: pointer
 
 footer.links a:focus,
 a:hover,
 a:active
   color: #4183c4
 
-footer .icon
-  // background-image: url(img/icon.png);
-  background-repeat: no-repeat
-  background-position: center
-  color: transparent
-  opacity: 0.3
-  background-size: 3em
-  padding: 0
+// footer
