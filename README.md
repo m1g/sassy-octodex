@@ -1,16 +1,12 @@
 # Sassy Octodex
-## Explorer Mode
 
-Use all of the Sass features:
+This is a replica of the [Github Octodex](https://octodex.github.com/) site using a responsive, flex-box layout and Sass features, including:
 
 * Nested selectors
 * Variables
 * [SassScript Functions](http://sass-lang.com/documentation/Sass/Script/Functions.html)
 
-## Adventure Mode
-
-* Use Mixins
-* Look into, and use the `@extend` feature of Sass
+![Github Octodex Image](http://i.imgur.com/Clsv0Oo.png)
 
 ## Resources
 
